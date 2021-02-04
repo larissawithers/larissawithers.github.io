@@ -1,6 +1,7 @@
 function start(){
 
     //$("body").css("background-color","pink");
+    $("#menu a:first").click();
 
 }
 
@@ -13,8 +14,8 @@ function loadpage(e){
     $("#menu a.active").removeClass("active");
     $(this).addClass("active");
 
-    var herf  = $(this).attr("herf");
-    $("#content").load(herf);
+    var href = $(this).attr("href");
+    $("#content").load(href);
     
 }
 
