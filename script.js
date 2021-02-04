@@ -11,10 +11,11 @@ function loadpage(e){
 
     e.preventDefault();
     $("#menu a.active").removeClass("active");
-    $(this).addclass("active");
+    $(this).addClass("active");
 
-    $("content").load("about.html");
-
+    var herf  = $(this).attr("herf");
+    $("#content").load(herf);
+    
 }
 
 $(document).on("click", "#menu a", loadpage);
